@@ -11,8 +11,7 @@
     <%= address.address2 %>
   <% end %>
   <br/>
-  <%= [address.city, address.state ? address.state.name : address.state_name].join(', ') %>
+  <%= address.zipcode %> <%= address.city %>
   <br/>
   <%= address.country.name %>
-  <%= address.zipcode %>
 </div>

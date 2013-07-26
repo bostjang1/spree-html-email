@@ -1,0 +1,35 @@
+<table align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="text01aMC" width="540">
+			<table align="left" cellpadding="0" cellspacing="0" border="0">
+				<tr><td class="text01aTitle">
+					Zdravo <%= @order.bill_address ? @order.bill_address.full_name : ''  %>
+				</td></tr>	
+				<tr><td class="text01aSubtitle">
+					Povzetek vašega naročila na Lekarnar.com
+				</td></tr>
+				<tr><td class="text01aParagraph">
+					Zahvaljujemo se vam za nakup v spletni lekarni <a href="http://www.lekarnar.com">www.lekarnar.com</a>. Vaše naročilo bo obdelano s strani naših farmacevtov.
+				</td></tr>
+				<tr><td class="text01aParagraph">
+					Ko bo vaš paket poslan, boste prejeli sporočilo.
+				</td></tr>
+
+				<tr><td class="text01aParagraph">
+					Številka naročila: <%= @order.number %>
+				</td></tr>
+				<tr><td class="text01aParagraph">
+					  Podrobnosti naročila:
+  <%= link_to(order_url(@order, :host => Spree::Config[:site_url]), order_url(@order, :host => Spree::Config[:site_url])) %>
+				</td></tr>
+
+			</table>
+	    </td>
+    </tr>
+</table>
+
+<%= render :partial => 'spree/shared/email/order_details', :locals => {:order => @order} %>
+<%= render :partial => 'spree/shared/email/digitals', :locals => { :order => @order } %>
+<p class="thank-you">
+Hvala za zaupanje in lep pozdrav, <br/>Lekarnar
+</p>

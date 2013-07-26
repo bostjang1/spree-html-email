@@ -2,6 +2,9 @@
   <h2><%= t(:shipping_address) %></h2>
   <%= render :partial => 'spree/shared/email/address', :locals => {:address => shipment.address} %>
 </div>
+<p class="overview">
+  Dostavna služba: <%= @shipment.shipping_method.name %>
+</p>
 
 <h2><%= t(:shipment_details) %></h2>
 <table id="shipment-details" data-hook="shipment_details">

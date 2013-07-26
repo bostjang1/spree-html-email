@@ -1,6 +1,5 @@
 body
 {
-  background: #1155dd;
   color: #222222;
   font-family: sans-serif;
 }
@@ -11,25 +10,38 @@ a
 }
 h1, h2, h3, h4
 {
-  color: #1155dd;
-  font-weight: bold;
+  color: #1c6586;
+  font-weight: normal;
 }
 h1
 {
   font-size: 22px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 p
 {
   margin: 10px 0;
 }
+
+small
+{
+  color: #666666;
+  font-size: 13px;
+}
 #wrapper
 {
   background: white;
   box-shadow: 4px 5px 4px #666655;
-  margin: 0px auto 30px;
+  margin: 10px auto;
   padding: 20px 40px 40px;
-  width: 600px;
+  width: 560px;
+  border: 15px solid #91d4e1;
+}
+#logo
+{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 30px 0;
 }
 footer
 {
@@ -37,26 +49,23 @@ footer
 }
 table
 {
-  border: 1px solid #cccccc;
-  border-bottom-color: #aaaaaa;
+  border: 1px solid #dddddd;
   border-collapse: collapse;
-  border-right-color: #aaaaaa;
   display: table;
   margin-bottom: 5px;
   width: 100%;
 }
 table .number
 {
-  min-width: 45px;
+  min-width: 50px;
   text-align: right;
 }
 table th
 {
-  background: #1155dd;
+  background: #91d4e1;
   color: white;
   font-weight: bold;
   padding: 7px 10px;
-  text-shadow: #222222 1px 1px 0px;
 }
 table tr.alt td
 {
@@ -69,7 +78,16 @@ table td
 }
 table td.name
 {
-  min-width: 180px;
+  min-width: 160px;
+}
+table td.qty
+{
+  text-align: center;
+  min-width: 35px;
+}
+table td.price, table td.total
+{
+  min-width: 65px;
 }
 table td.title, table td.subtotal
 {
@@ -85,15 +103,15 @@ table.split td
 }
 #subtotal-row td, #order-total td
 {
-  border-top: solid 1px #aaaaaa;
+  border-top: solid 2px #dddddd;
 }
 #addresses
 {
-  width: 600px;
+  width: 560px;
 }
 #addresses .address
 {
-  width: 292px;
+  width: 270px;
 }
 #addresses .address#billing
 {
