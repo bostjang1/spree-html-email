@@ -5,8 +5,20 @@
   </tr>
   <tr class="alt">
     <td>Način plačila</td>
-    <td><%= order.payments.last.payment_method_name %><%# order.payments.completed.collect {|p| p.payment_method.name }.join(', ') %></td>
+    <td><%= order.payments.last.payment_method.name %><%# order.payments.completed.collect {|p| p.payment_method.name }.join(', ') %></td>
   </tr>
+  <% if order.payments.last.payment_method.name == "Plačilo po predračunu" && order.payment_state == "balance_due"%>
+    <td colspan="2">
+      Lekarna Nove Poljane<br>
+      Gasparijeva 2<br>
+      1000 Ljubljana<br><br>
+
+      NLB-Moste: SI56-02012-0089651536 (LJBASI2X)<br><br>
+
+      Pri izpolnjevanju naloga UPN v polje sklic vnesite SI00 <%= order.number.gsub("R", "")%><br>
+      V polju koda namena lahko izberete GDSV ali OTHR.
+    </td>
+  <% end %>
   <% if order.canceled? %>
     <tr>
       <td>Status naročila</td>
