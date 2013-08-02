@@ -11,7 +11,7 @@
     <%= address.address2 %>
   <% end %>
   <br/>
-  <%= address.zipcode %> <%= address.city %>
+  <%= address.zipcode != "-" ? address.zipcode : "" %> <%= address.city %>
   <br/>
   <%= address.country.name %>
 </div>
