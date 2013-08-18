@@ -40,9 +40,9 @@
     </td>
     <td>
       <% if order.shipment.shipping_method.name == "Osebni prevzem" %>
-      <h2><span>Podatki za osebni prevzem</span></h2>
-      <%= render :partial => 'spree/shared/email/pickup', :locals => {:address => order.ship_address} %>
-      <% else %>
+        <h2><span>Podatki za osebni prevzem</span></h2>
+        <%= render :partial => 'spree/shared/email/pickup', :locals => {:address => order.ship_address} %>
+        <% else %>
         <h2><span><%= t(:shipping_address) %></span></h2>
         <%= render :partial => 'spree/shared/email/address', :locals => {:address => order.ship_address} %>
       <% end %>
