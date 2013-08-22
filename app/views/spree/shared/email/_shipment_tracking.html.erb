@@ -2,7 +2,7 @@
 <p class="tracking">
 	<h2><span><%= t(:tracking_information) %></span></h2>
 	<% if shipment.shipping_method.name == "Pošta Slovenije" %>
-	  <%= link_to shipment.tracking, "http://sledenje.posta.si/Default.aspx?tracenumber=" + (shipment.tracking.gsub(" ","") || '' )+ "&lang=SI" %>
+	  <p>Poteku dostave lahko sledite na straneh Pošte Slovenije: <%= link_to shipment.tracking, "http://sledenje.posta.si/Default.aspx?tracenumber=" + (shipment.tracking.gsub(" ","") || '' )+ "&lang=SI" %></p>
 	<% else %>
       <%= shipment.tracking %>
 	<% end %>

@@ -2,7 +2,7 @@
   <%= t(:dear_customer, :default => "Zdravo %{name},", :name => @shipment.order.bill_address ? @shipment.order.bill_address.firstname : '' ) %>
 </p>
 <p class="overview">
-  Vaše naročilo je poslano
+  Vaše naročilo je <% if @shipment.shipping_method.name == "Osebni prevzem" %> pripravljeno na prevzem<% else %>poslano<% end %>.
 </p>
 <p class="link">
   Oglejte si naročilo:

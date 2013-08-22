@@ -4,7 +4,7 @@
   V zvezi z vašim naročilom <%= @order.number %> ste prejeli novo sporočilo:
 </p>
 <p style="border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; padding: 8px 0px;">
-  <%=raw @order.order_comments.last.body.gsub(/[\n]/,"<br/>") %>
+  <%= @order.order_comments.last.body.gsub(/[\n]/,"<br/>") %>
 </p>
 <p class="link">
   Porobnosti naročila:
