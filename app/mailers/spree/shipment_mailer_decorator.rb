@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Spree::ShipmentMailer.class_eval do
   helper 'spree/base'
   layout 'spree/layouts/email'
